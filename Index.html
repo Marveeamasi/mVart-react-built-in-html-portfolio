@@ -1,0 +1,151 @@
+<!--
+ created by mVart
+  
+ 
+  
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+
+ <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+ <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <title>Page Title</title>
+        <style type="text/css">*{
+        margin:0;
+        padding:0;
+        font-family:"Montserrat", sans-serif;
+        }
+        body{
+        /* background-color: #eef5ff;*/
+        background:#eee;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        height:100vh;
+        width:100vw;
+        color:#fff;
+        font-family:"Montserrat", sans-serif;
+        }
+        .nav{
+        width:100%;
+        height:50px;
+        background-color:#000;
+        }
+        .card{
+        height:505px;
+        width:50vw;
+        max-width:350px;
+        min-width:300px;
+        text-align: center;
+        border-radius:10px;
+        background:#fff;
+        /* box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);*/
+        -webkit-box-shadow: 0 0 25px rgba(17, 1, 68, 0.08);
+        box-shadow: 0 0 25px rgba(17, 1, 68, 0.08);
+        color:#000;
+        }
+        .card-name{
+        font-size:18px;
+        font-weight:600;
+        }
+        .card-about{
+        font-size:15px;
+        margin-top:3px;
+        }
+        .card img{
+        width:140px;
+        border-radius:100%;
+        padding:10px;
+        margin-top:-200px;
+        position:relative;
+        z-index:100;
+        /* box-shadow: 0px 100px 201px -108px rgba(0,0,0,0.75);*/
+        }
+        
+        .header-card{
+        background:#48aaad;
+        clip-path: polygon(0 0, 100% 0, 100% 31%, 0 99%);
+        height:200px;
+        width:100%;
+        border-radius:10px 10px 0px 0px;
+        }
+        .card-followers{
+        column-count:2;
+        column-gap:15px;
+        column-rule:2px solid #d3d3d3;
+        column-rule-style:solid;
+        font-size:15px;
+        }
+        .accounts-container{
+        margin-top:50px;
+        text-align:center;
+        }
+        .acc-img{
+        height:50px !important;
+        width:50px !important;
+        border-radius:100px;
+        display:inline;
+        }
+        .follow-btn{
+        min-width:265px;
+        max-width:320px;
+        padding:20px;
+        height:45px;
+        border:2px solid #d3d3d3;
+        background:transparent;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:5px;
+        margin-top:15px;
+        text-decoration:none;
+        }
+        a{
+        text-decoration:none;
+        }</style>
+    </head>
+    <body>
+      <script type="text/babel">
+      alert("this is my portfolio react code hope you all like it ")
+function ProfileCard(props){
+  return(
+    <div className="card">
+    <div className="header-card">
+    </div>
+    <img 
+    src="https://api.sololearn.com/Uploads/Avatars/18717961.jpg"  
+    className="profile-img"
+    />
+    <p className="card-name">{props.name}</p>
+    <p align="center" className="card-about">  UI / UX DESIGNER</p>
+    <br/>
+     <div className="card-followers">
+       1.5K <br /> FOLLOWERS <br/>  30 <br/> FOLLOWING
+     </div>
+     <br />
+     <div className="accounts-container">
+    <a href="https://github.com/Marveeamasi"> <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" className="acc-img"/> </a>
+    <a href="https://www.linkedin.com/mwlite/in/marvee-amasi-b87470240"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/800px-LinkedIn_logo_initials.png" className="acc-img stack-img"/> </a>
+    
+    <a href="https://www.sololearn.com/profile/17419982"> <img src="https://api.sololearn.com/Uploads/Avatars/1.jpg" className="acc-img stack-img"/></a>
+     
+     </div>
+    <p align="center"><a href="https://www.sololearn.com/profile/17419982/?ref=app"><button className="follow-btn">FOLLOW</button></a> </p>
+    </div>
+   
+    )
+}
+const mountNode  = document.getElementById("container");
+ReactDOM.render(
+  <ProfileCard name="mVart" />,
+  mountNode
+);
+
+      </script> 
+      <div id="container" ></div>
+    </body>
+</html>
